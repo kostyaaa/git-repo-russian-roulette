@@ -28,13 +28,13 @@ def patr(number, radius):  # патроны(количество патроно�
 
 
 def krutim():
-    x = random.randint(0, 100)
+    x = random.randint(7, 100)
     for i in range(0, x):
         turtle.fillcolor("red")
         turtle.begin_fill()
         circle_c(coords[i % number][0], coords[i % number][1], gun_radius)
         turtle.end_fill()
-        if i != x:
+        if i != x-1:
             turtle.fillcolor("white")
             turtle.begin_fill()
             circle_c(coords[i % number][0], coords[i % number][1], gun_radius)
@@ -46,6 +46,7 @@ ans = ""
 while ans != "N":
     ans = turtle.textinput("рисуем?", "y,n")
     if ans == "Y" or ans == "y":
+        coords = []
         x = int(turtle.textinput("введите координаты центра", "X"))
         y = int(turtle.textinput("введите координаты центра", "Y"))
         radius = int(turtle.textinput("введите радиус", "R"))
