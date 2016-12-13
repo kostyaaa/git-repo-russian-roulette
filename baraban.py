@@ -34,10 +34,13 @@ def krutim():
         turtle.begin_fill()
         circle_c(coords[i % number][0], coords[i % number][1], gun_radius)
         turtle.end_fill()
-        turtle.fillcolor("white")
-        turtle.begin_fill()
-        circle_c(coords[i % number][0], coords[i % number][1], gun_radius)
-        turtle.end_fill()
+        if i != x:
+            turtle.fillcolor("white")
+            turtle.begin_fill()
+            circle_c(coords[i % number][0], coords[i % number][1], gun_radius)
+            turtle.end_fill()
+        else:
+            pass
 
 ans = ""
 while ans != "N":
