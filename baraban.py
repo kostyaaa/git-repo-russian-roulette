@@ -28,7 +28,7 @@ def patr(number, radius):  # патроны(количество патроно�
 
 
 def krutim():
-    x = random.randint(7, 100)
+    x = random.randint(7, 50)
     for i in range(0, x):
         turtle.fillcolor("red")
         turtle.begin_fill()
@@ -63,6 +63,7 @@ while ans != "N":
         turtle.circle(5)
         patr(number, radius)
         krutim()
+
     elif ans == "N" or ans == "n":
         break
     else:
