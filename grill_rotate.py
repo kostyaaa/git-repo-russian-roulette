@@ -7,11 +7,13 @@ grill = ('X...',
 # grill - кортеж строк
 coords = []
 counter = 0
+y = 0
 for i in range(0, 4):
     z = grill[i]
     while y != -1:
         y = z.find("X")
         if y != -1:
             coords.append((i, y))
+            z.replace("X","O")
             counter += 1
 print(coords, counter)
